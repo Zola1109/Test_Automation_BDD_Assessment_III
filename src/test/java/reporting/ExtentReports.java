@@ -62,10 +62,5 @@ public  class ExtentReports  {
             ExtentReports.test.log(Status.FAIL, String.valueOf(scenario));
         }
     }
-//
-//    @AfterSuite
-//    public static void flushReports() throws IOException {
-//        extent.flush();
-//        Desktop.getDesktop().browse(new File(FileReporter).toURI());
-//    }
+
 }

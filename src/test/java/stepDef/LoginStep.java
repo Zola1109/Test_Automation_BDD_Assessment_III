@@ -1,6 +1,7 @@
 package stepDef;
 
 import com.aventstack.extentreports.ExtentReports;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -43,11 +44,17 @@ public class LoginStep {
         LoginPage.LogIn(email, password);
     }
 
-    @And("clicks the {string} button")
-    public void clicksTheButton(String arg0) {
+    @And("clicks the button")
+    public void clicksTheButton() {
+        LoginPage.clickLoginButton();
     }
 
     @Then("the user should be logged in")
     public void theUserShouldBeLoggedIn() {
+        LoginPage.goTo();
+    }
+    @After
+    public static void after_all(){
+        driver.quit();
     }
 }

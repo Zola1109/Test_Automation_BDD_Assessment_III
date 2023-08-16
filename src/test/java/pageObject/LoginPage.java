@@ -28,20 +28,20 @@ public class LoginPage {
 
 //       ExtentReport.createTest("User Login");
 
-        test.info("the user enters their credentials");
+//        test.info("the user enters their credentials");
 
         WebElement emailInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//input[@id='email'])[1]")));
         emailInput.sendKeys(Email);
 
         WebElement passwordInput = LoginStep.driver.findElement(By.xpath("(//input[@id='pass'])[1]"));
         passwordInput.sendKeys(password);
-        test.info("Value entered", MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot("Sign In")).build());
+//        test.info("Value entered", MediaEntityBuilder./(getScreenshot("Sign In")).build());
 
 
 
     }
     public static void clickLoginButton(){
-        LoginStep.driver.findElement(By.xpath("(//span[contains(text(),'Sign In')])[1]")).click();
+        LoginStep.driver.findElement(By.xpath("//*[@id=\"send2\"]/span")).click();
 
     }
 
